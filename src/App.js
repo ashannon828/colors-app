@@ -6,7 +6,7 @@ import './App.css'
 function App() {
 	return (
 		<div>
-			<Palette {...seedColors[4]} />
+			<Palette {...seedColors[5]} />
 		</div>
 	)
 }
