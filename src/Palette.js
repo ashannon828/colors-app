@@ -1,22 +1,9 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/styles'
+import styles from './styles/PaletteStyles'
 import ColorBox from './ColorBox'
 import Navbar from './Navbar'
 import PaletteFooter from './PaletteFooter'
-
-import './Palette.css'
-
-const styles = {
-	Palette: {
-		height: '100vh',
-		display: 'flex',
-		flexDirection: 'column',
-		overflow: 'hidden'
-	},
-	PaletteColors: {
-		height: '90%'
-	}
-}
 
 class Palette extends Component {
 	constructor(props) {
@@ -54,7 +41,7 @@ class Palette extends Component {
 					handleChange={this.changeFormat}
 					showingAllColors={true}
 				/>
-				<div className={classes.PaletteColors}>{colorBoxes}</div>
+				<div className={classes.colors}>{colorBoxes}</div>
 				<PaletteFooter paletteName={paletteName} emoji={emoji} />
 			</div>
 		)
