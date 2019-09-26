@@ -1,14 +1,3 @@
-.Palette {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-}
-
-.Palette-colors {
-	height: 90%;
-}
-
 .Palette-footer {
 	background: white;
 	height: 5vh;
