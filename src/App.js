@@ -16,9 +16,10 @@ class App extends Component {
 		this.findPalette = this.findPalette.bind(this)
 	}
 	findPalette(id) {
-		return this.state.palettes.find(function(palette) {
-			return palette.id === id
-		})
+		console.log(id)
+		// return this.state.palettes.find(function(palette) {
+		// 	return palette.id === id
+		// })
 	}
 	savePalette(newPalette) {
 		this.setState({ palettes: [ ...this.state.palettes, newPalette ] })
@@ -54,16 +55,12 @@ class App extends Component {
 					render={(routeProps) => (
 						<PaletteList palettes={this.state.palettes} {...routeProps} />
 					)}
-				/>
+				/>s
 				<Route
 					exact
 					path="/palette/:id"
 					render={(routeProps) => (
-						<Palette
-							palette={generatePalette(
-								this.findPalette(routeProps.match.params.id)
-							)}
-						/>
+						<Palette palette={generatePalette(this.findPalette(routeProps))} />
 					)}
 				/>
 			</Switch>
